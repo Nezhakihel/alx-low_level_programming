@@ -40,8 +40,8 @@ int main(void)
 		if (count != 98)
 			printf(", ");
 
-		f1_1 = f2_h1;
-		f1_2 = f2_h2;
+		f1_1 = f2_1;
+		f1_2 = f2_2;
 		f2_1 = h1;
 		f2_2 = h2;
 	}
