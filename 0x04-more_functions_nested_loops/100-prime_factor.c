@@ -11,7 +11,7 @@ int main(void)
 
 	x = 612852475143;
 
-	for (y = 2; x > y; y++)
+	for (y = 2; y < x; y++)
 	{
 		while (x % y == 0)
 		{
