@@ -2,9 +2,7 @@
 
 /**
  * main - entry point
- * Description: prints the numbers 1 - 100 w/
- * Fizz for multiples of 3, Buzz for multiples of 5,
- * FizzBuzz for multiples of both
+ * Description: prints the numbers 1 - 100
  * Return: 0
  */
 
@@ -31,7 +29,7 @@ int main(void)
 		}
 		if (x != 100)
 		{
-		putchar(' ');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
