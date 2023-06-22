@@ -7,23 +7,18 @@
 
 int main(void)
 {
-	long int i, n, d;
+	long x, y;
 
-	n = 612852475143;
+	x = 612852475143;
 
-	for (i = 1; i <= n; i++)
+	for (y = 2; x > y; y++)
 	{
-		if (n % i == 0)
+		while (x % y == 0)
 		{
-			if (n == i)
-			{
-				printf("%ld\n", i);
-				break;
-			}
-			d = n / i;
-			n = d;
-			i = 1;
+			x = x / y;
 		}
 	}
+	printf("%lu", y);
+	putchar('\n');
 	return (0);
 }
