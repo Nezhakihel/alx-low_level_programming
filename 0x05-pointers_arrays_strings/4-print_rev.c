@@ -9,7 +9,7 @@
 void print_rev(char *s)
 {
 	int length = strlen(s);
-	char s_reverse[length];
+	char s_reverse[100];
 	int j = 0;
 	int i;
 
