@@ -9,18 +9,11 @@
 
 void puts2(char *str)
 {
-	int a = 0, b, c;
-	char d;
+	int i;
 
-	while (str[a] != '\0')
+	for (i = 0; i <= sizeof(str); i = i + 1)
 	{
-		a++;
+		printf("%c", str[i]);
 	}
-	c = a - 1;
-	for (b = 0; c >= 0 && b < c; c--, b++)
-	{
-		d = str[b];
-		str[b] = str[c];
-		str[c] = d;
-	}
+	printf("\n");
 }
