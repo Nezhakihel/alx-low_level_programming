@@ -20,7 +20,7 @@ void puts2(char *str)
 	for (b = 0; c >= 0 && b < c; c--, b++)
 	{
 		d = str[b];
-		str[b] = s[trc];
+		str[b] = str[c];
 		str[c] = d;
 	}
 }
