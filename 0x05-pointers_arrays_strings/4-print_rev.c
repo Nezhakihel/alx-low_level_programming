@@ -18,8 +18,8 @@ void print_rev(char *s)
 	while (count > 0)
 	{
 		s--;
-		_putchar(*s);
+		printf("%c", *s);
 		count--;
 	}
-	_putchar('\n');
+	printf("\n");
 }
