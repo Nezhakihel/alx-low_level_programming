@@ -9,7 +9,7 @@
 
 void puts2(char *str)
 {
-	int i;
+	long unsigned int i;
 
 	for (i = 0; i <= sizeof(str); i = i + 1)
 	{
