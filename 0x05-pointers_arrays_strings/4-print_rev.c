@@ -11,7 +11,7 @@ void print_rev(char *s)
 	char s_reverse[length];
 	int j = 0;
 
-	for (int i = length-1; i >= 0; i--)
+	for (int i = length - 1; i >= 0; i--)
 	{
 		s_reverse[j] = s[i];
 		j++;
