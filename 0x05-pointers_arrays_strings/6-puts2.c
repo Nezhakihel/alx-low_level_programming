@@ -12,15 +12,15 @@ void puts2(char *str)
 	int a = 0, b, c;
 	char d;
 
-	while (s[a] != '\0')
+	while (str[a] != '\0')
 	{
 		a++;
 	}
 	c = a - 1;
 	for (b = 0; c >= 0 && b < c; c--, b++)
 	{
-		d = s[b];
-		s[b] = s[c];
-		s[c] = d;
+		d = str[b];
+		str[b] = s[trc];
+		str[c] = d;
 	}
 }
