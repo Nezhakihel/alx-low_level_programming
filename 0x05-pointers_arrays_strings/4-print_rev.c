@@ -8,12 +8,12 @@
 
 void print_rev(char *s)
 {
-	int length = strlen(s);
-	char s_reverse[100];
+	int len = strlen(s);
+	char s_reverse[len];
 	int j = 0;
 	int i;
 
-	for (i = length - 1; i >= 0; i--)
+	for (i = len - 1; i >= 0; i--)
 	{
 		s_reverse[j] = s[i];
 		j++;
