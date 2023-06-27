@@ -18,7 +18,7 @@ void puts_half(char *str)
 	for (i = 0 ; i < count ; i++)
 	{
 		if (i > (count - 1) / 2)
-			_putchar(*(str + i));
+			printf("%c", *(str + i));
 	}
-	_putchar('\n');
+	printf("\n");
 }
