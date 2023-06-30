@@ -20,8 +20,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	/* size of n2 */
 	while (n2[j] != 0)
 		j++;
+	i--;
+	j--;
 	/* if size of n1 || n2 less than size_r return 0 */
-	if ((i - 1 > size_r) || (j - 1 > size_r))
+	if ((i  > size_r) || (j > size_r))
 		return (0);
 	else
 		r = n1 + n2;
