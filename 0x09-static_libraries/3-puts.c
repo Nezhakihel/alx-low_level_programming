@@ -11,10 +11,10 @@ void _puts(char *str)
 
 	while (str[i])
 	{
-		_putchar(str[i]);
+		printf("%c", str[i]);
 
 		i++;
 	}
 
-	_putchar('\n');
+	printf("\n");
 }
