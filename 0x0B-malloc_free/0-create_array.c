@@ -21,7 +21,7 @@ char *create_array(unsigned int size, char c)
 	else
 	{
 		p = malloc(size * sizeof(char));
-		if (malloc == NULL)
+		if (p == NULL)
 		{
 			return (NULL);
 		}
