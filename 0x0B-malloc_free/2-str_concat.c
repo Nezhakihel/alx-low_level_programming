@@ -20,14 +20,14 @@ char *str_concat(char *s1, char *s2)
 	/* */
 	if ((*s1 == 0) && (*s2 == 0))
 		return (NULL);
-	while (*s1 != '\0')
+	while (s1[i] != '\0')
 	{
-		s1++;
+		i++;
 		length_s1++;
 	}
-	while (*s2 != '\0')
+	while (s2[j] != '\0')
 	{
-		s2++;
+		j++;
 		length_s2++;
 	}
 	length_str = (length_s1 + length_s2) + 1;
