@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 void multiply(char *f, char *s);
 int onlyNumbers(char *c);
