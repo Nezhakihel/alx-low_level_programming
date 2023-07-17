@@ -7,6 +7,7 @@
  * @name: pointer to name
  * @age: pointer to age
  * @owner: pointer to owner
+ * description: initialize a variable
  * Return: Nothing
  */
 
