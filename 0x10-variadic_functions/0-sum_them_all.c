@@ -10,8 +10,8 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	int i;
-	unsigned int sum = 0;
+	unsigned int i;
+	intt sum = 0;
 	/* */
 	if (n == 0)
 	{
