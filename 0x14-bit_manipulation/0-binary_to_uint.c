@@ -9,6 +9,7 @@
 int sizeofbinary(const char *b)
 {
 	int size = 0;
+	/* */
 	while (*b != '\0')
 	{
 		size++;
@@ -33,15 +34,16 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int resulta = 0;
 	char one_char[2];
 	/* */
-	if (b == NULL){
+	if (b == NULL)
+	{
 		return (0);
 	}
 	size_of_binary = sizeofbinary(b);
 	exponent = size_of_binary - 1;
-	
+	/* */
 	for (j = 0; j < size_of_binary; j++)
 	{
-		if ((b[j]!= '0') && (b[j] != '1'))
+		if ((b[j] != '0') && (b[j] != '1'))
 		{
 			return (0);
 		}
