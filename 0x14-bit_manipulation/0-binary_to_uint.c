@@ -1,53 +1,32 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include <math.h>
 #include "main.h"
-int sizeofbinary(const char *b)
-{
-	int size = 0;
-	/* */
-	while (*b != '\0')
-	{
-		size++;
-		b++;
-	}
-	return (size);
-}
 
 /**
- * binary_to_uint -  converts a binary number to an unsigned int
- * @b    : is pointing to a string of 0 and 1 chars
- * Return: the converted number, or 0 if
- * ........there is one or more chars in the string b that is not 0 or 1
- * ........b is NULL
- */
-
+* binary_to_uint - converts a binary number to an unsigned int
+* @b: string of 1s and 0s in char form
+*
+* Return: Converted number
+* 0 if there are one or more chars in b that are not 0 or 1
+* 0 if b is null
+*/
 unsigned int binary_to_uint(const char *b)
 {
-	int size_of_binary;
-	double exponent;
-	int j = 0;
-	unsigned int resulta = 0;
-	char one_char[2];
-	/* */
-	if (b == NULL)
-	{
+	unsigned int output = 0, mul = 1;
+	int len = 0;
+
+	if (!b)
 		return (0);
-	}
-	size_of_binary = sizeofbinary(b);
-	exponent = size_of_binary - 1;
-	/* */
-	for (j = 0; j < size_of_binary; j++)
+
+	while (b[len])
+		len++;
+
+	for (len -= 1; len >= 0; len--)
 	{
-		if ((b[j] != '0') && (b[j] != '1'))
-		{
+		if (b[len] != '0' && b[len] != '1')
 			return (0);
-		}
-		one_char[0] = b[j];
-		one_char[1] = '\0';
-		resulta = resulta + ((atoi(one_char)) * (int)(pow(2, exponent)));
-		exponent--;
+
+		output += (b[len] - '0') * mul;
+		mul *= 2;
 	}
-	return (resulta);
+
+	return (output);
 }
