@@ -14,7 +14,7 @@ int create_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 	/* open the file */
-	fd_open = open(filename, O_CREAT | O_WRONLY | O_trunc, 0600);
+	fd_open = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	/* if file can not be created */
 	if (fd_open == -1)
 		return (-1);
