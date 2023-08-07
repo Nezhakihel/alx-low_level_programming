@@ -1,24 +1,22 @@
 #include "main.h"
-#include <stdio.h>
-#include <elf.h>
 
 /**
  * read_textfile - reads a text file and prints it to the POSIX standard output
  * @filename: pointer to char
  * @letters : number of letters it should read and print
- * Return   : the actual number of letters it could read and print
+ * Return: the actual number of letters it could read and print
  * .......... or 0 if Error
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file_descriptor_open;
+	int file_descriptor_open, file_descriptor_read, fd_write;
 	char *buffer_letters;
 	/* if filename is NULL return 0 */
 	if (filename == NULL)
 		return (0);
 	/* open the file */
-	file_descriptor_open = open(filename, 0_RDONLY);
+	file_descriptor_open = open(filename, O_RDONLY);
 	/* if file can not open return 0*/
 	if (file_descriptor_open == -1)
 		return (0);
@@ -36,9 +34,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	/* write the file */
-	file_descriptor_write = write(STDOUT_FILENO, buffer_letters, file_descripor_read);
+	fd_write = write(STDOUT_FILENO, buffer_letters, file_descriptor_read);
 	/* if file can not be written */
-	if (file_descriptor_write == -1)
+	if (fd_write == -1)
 	{
 		free(buffer_letters);
 		return (0);
@@ -46,5 +44,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	/* close file */
 	close(file_descriptor_open);
 	free(buffer_letters);
-	return (file_descriptor_write);
+	return (fd_write);
 }
