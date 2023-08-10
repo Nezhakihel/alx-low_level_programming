@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main -  displays the information contained in the ELF header at the start of an ELF file.
+ * main -  displays info in the ELF header at the start of an ELF file.
  * @argc: var
  * @argv: pointer
  * Return: 0 success
