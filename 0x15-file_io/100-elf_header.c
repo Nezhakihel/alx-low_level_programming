@@ -12,11 +12,6 @@ int main(int argc, char *argv[])
 	int open, read;
 	Elf64_Ehdr *header;
 
-	if (argc != 2)
-	{
-		printf("Usage: elf_header elf_filename\n");
-		return (1);
-	}
 	open = open(argv[1], O_RDONLY);
 	if (open == -1)
 	{
@@ -38,11 +33,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
-	if (header->e_ident[0] != 0x7f || header->e_ident[1] != 'E' || header->e_ident[2] != 'L' || header->e_ident[3] != 'F')
-	{
-		dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
-			exit(98);
-	}
+	check_elf(header->e_ident);
 	printf("ELF Header:\n");
 	print_magic(header->e_ident);
 	print_class(header->e_ident);
