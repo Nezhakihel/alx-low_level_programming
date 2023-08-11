@@ -1,13 +1,5 @@
 #include "main.h"
 
-#include <elf.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
  * main -  displays info in the ELF header at the start of an ELF file.
  * @argc: var
@@ -15,7 +7,7 @@
  * Return: 0 success
  */
 
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	int open, read;
 	Elf64_Ehdr *header;
